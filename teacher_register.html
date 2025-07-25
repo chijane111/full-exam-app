@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Registration</title>
+  <link rel="stylesheet" href="{% static 'css/teacher_register.css' %}">
+</head>
+<body>
+
+  <img src="{% static 'images/boy.png' %}" alt="Boy studying" class="study-img">
+
+  <div class="rapp">
+    <h3>Register</h3>
+    <h2>Teacher Account</h2>
+
+    <form method="POST" action="{% url 'teacher_register' %}">
+      {% csrf_token %}
+
+      {% if error %}
+  <div class="error">
+    <p style="color: red;">{{ error }}</p>
+  </div>
+{% endif %}
+
+
+      <div class="input-box">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password1" placeholder="Password" required>
+        <input type="password" name="password2" placeholder="Confirm Password" required>
+      </div>
+
+      <button type="submit" id="blue">Register</button>
+    </form>
+
+    <p class="small">Already have an account? <a href="{% url 'teacher_login' %}">Login</a></p>
+  </div>
+
+</body>
+</html>

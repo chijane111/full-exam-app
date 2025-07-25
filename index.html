@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+</head>
+<body>
+
+ <header class="first">
+  <p id="teach">Teachearn</p>
+  <nav>
+    <div class="auth-dropdown">
+      <button class="dropbtn">Register</button>
+      <div class="dropdown-content">
+        <a href="{% url 'registration' %}">Student </a>
+        <a href="{% url 'teacher_register' %}">Teacher </a>
+      </div>
+    </div>
+
+    <div class="auth-dropdown">
+      <button class="dropbtn">Login</button>
+      <div class="dropdown-content">
+        <a href="{% url 'login' %}">Student </a>
+        <a href="{% url 'teacher_login' %}">Teacher</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <section class="hero">
+      <div class="excel">
+    <h2>YOU DESERVE TO EXCEL.</h2>
+    <P>Work hard.</P>
+    <p>Stay focused.</p>
+    <p>Make it happen.</p>
+    
+   <a href="{% url 'login' %}" class="btn">Get Started</a></div>
+    <img src= "{% static 'images/laptopandbooks.png' %}" alt="laptop and books" class="lappbook">
+
+    
+     </section>
+  
+     <section class="middle">
+    <div>
+    <br>
+    <strong><h3>CONFIDENCE BEGINS WITH PREPARATION</h3></strong></div><br><br>
+      
+      
+    <div id="image">
+    <img src="{% static 'images/two hands.png' %}" class="hands" alt="Hands"></div>
+    <p id="join">Join Thousands of Learners Using Teachearn to Excel in Every Exam.</p> <br><br>
+    
+    </section>
+
+<section class="features">
+    <section class="features">
+      <strong><h3>Why Use Teacherearn?</h3></strong>
+      <div class="feature-grid">
+        
+        <div class="feature-item">
+           <img src="{% static 'images/instant score.jpg' %}" alt="instant score">
+           <strong><p> Instant Score Display</p></strong><br>
+         <i><p>See Your Score the Moment You Submit!" <br>
+          Score Revealed in Seconds</p></i>
+        </div>
+        
+        <div class="feature-item">
+          <img src="{% static 'images/mobile friendly.jpg' %}" alt="mobile-friendly">
+          <strong><p> Mobile Friendly</p></strong><br>
+          <i><p>Mobile. Fast. Accurate.</p></i><br>
+        </div>
+        
+        <div class="feature-item">
+          <img src="{% static 'images/easy interface.jpg' %}" alt="easy-interface">
+          <strong><p>Simple & Easy Interface</p></strong><br>
+         <i><p>For users not developers</p></i> 
+        </div>
+    
+      </div>
+    </section>
+    
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p><strong>Teachearn</strong> Making learning easier, faster, and smarter.</p>
+      <p>Instant results. User-friendly interface. Practice anytime, anywhere.</p>
+      <p>Designed for students, teachers, and self-learners who value progress and simplicity.</p>
+      <p>&copy; 2025 SmartExam App. All rights reserved.</p>
+      <p>Need help or have feedback? <a href="greatness:support@teachearn.com">Contact us</a></p>
+    </div>
+  </footer>
+  
+
+</body>
+</html> 

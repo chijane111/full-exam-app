@@ -1,0 +1,94 @@
+/* teacher_dashboard.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.dashboard-header {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: crimson;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #0055aa;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}

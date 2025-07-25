@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+</head>
+<body>
+    <img src="{% static 'images/ppppensive.jpg' %}" alt="a man thinking" class="man">
+        
+    <div id="well">
+        
+        
+       <h1>Welcome! your exam is about to start.</h1><br><br>
+
+    <button id="eamm"><a href="{% url 'name_entry' %}" class=bbttn> Click here to start</a></button>
+
+    
+        
+     </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Scores</title>
+  <link rel="stylesheet" href="{% static 'css/teacher_dashboard.css' %}">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Student Scores</h1>
+    <a href="{% url 'teacher_dashboard' %}" class="logout-btn">Back to Dashboard</a>
+  </header>
+
+  <main class="dashboard-main">
+    {% if scores %}
+      <table>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Score</th>
+            <th>Taken At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for score in scores %}
+            <tr>
+              <td>{{ score.student.username }}</td>
+              <td>{{ score.subject.name }}</td>
+              <td>{{ score.score }}</td>
+              <td>{{ score.taken_at|date:"M d, Y H:i" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No scores available yet.</p>
+    {% endif %}
+  </main>
+</body>
+</html>

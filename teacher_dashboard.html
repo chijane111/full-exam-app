@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="{% static 'css/teacher_dashboard.css' %}">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Welcome, {{ request.user.username }}</h1>
+    <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="card">
+      <h2>Manage Questions</h2>
+      <p>Create and edit questions for all subjects.</p>
+      <a href="{% url 'add_question' %}" class="card-btn">Add Questions</a>
+    </div>
+
+    <div class="card">
+      <h2>View Student Scores</h2>
+      <p>Check performance of students by subject.</p>
+      <a href="{% url 'view_scores' %}" class="card-btn">View Scores</a>
+
+    </div>
+  </main>
+</body>
+</html>

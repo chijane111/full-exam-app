@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+    background-color: #eef2f3;
+  }
+  #welll{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    border: 1px light black;
+    height:300px;
+    width:500px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 20px 20px 20px 5px gray;
+  
+
+  }
+  input {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+  }
+
+
+  .link {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link.hover {
+    background-color: darkblue;
+  }

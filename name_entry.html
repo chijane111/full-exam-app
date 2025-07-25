@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Name</title>
+  <link rel="stylesheet" href="{% static 'css/name_entry.css' %}">
+</head>
+<body>
+  <div id="welll">
+    <h1>Welcome to the Exam</h1>
+    <p>Please enter your name to begin:</p>
+
+    <form method="POST" action="{% url 'name_entry' %}">
+      {% csrf_token %}
+      <input type="text" name="studentName" placeholder="Enter your name" required />
+      <br><br>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</body>
+</html>

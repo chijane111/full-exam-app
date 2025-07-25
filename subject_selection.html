@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Exam</title>
+  <link rel="stylesheet" href="{% static 'css/subject_selection.css' %}">
+
+  
+</head>
+<body>
+  <div id="sellet">
+  <h1>Choose a Subject</h1>
+  <p id="greeting" >
+  Choose a subject {{ request.session.studentName }}!
+</p>
+
+
+<a href="{% url 'english_exam' %}" class="subject-btn">English</a>
+ <a href="{% url 'math_exam' %}" class="subject-btn">Mathematics</a>
+ <a href="{% url 'science_exam' %}" class="subject-btn">Science</a>
+ <a href="{% url 'history_exam' %}" class="subject-btn">History</a>
+
+
+  
+</body>
+</html>
